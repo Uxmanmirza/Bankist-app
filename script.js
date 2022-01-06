@@ -80,14 +80,6 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
-// const user = 'Steven Thomas Williams';
-// const username = user.split('').map(function (name) {
-//   return name[(0, 0, 0)];
-// });
-// //   .join('');
-
-// console.log(username);
-
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -112,3 +104,8 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+const deposit = movements.filter(mov => mov > 0);
+console.log(deposit);
+const withdrawal = movements.filter(mov => mov < 0);
+console.log(withdrawal);
